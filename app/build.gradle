@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.gc_hank.evolutionpro"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    def listSubFile = {
+        def resFolder = 'src/main/res/layouts'
+        def files = file(resFolder).listFiles()
+        def folders = []
+        files.each {
+            item -> folders.add(item.absolutePath)
+        }
+        folders.add(file(resFolder).parentFile.absolutePath)//先保证分包
+        return folders
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = listSubFile()
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.jakewharton:butterknife:8.1.0'
+    annotationProcessor 'com.jakewharton:butterknife:8.1.0'
+    implementation 'com.jakewharton:butterknife-compiler:8.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //通用依赖模块，所有业务模块都会引入
+    implementation project(':function:common')
+    //这里会引用业务层的module
+    if (isModule.toBoolean()) {
+        implementation project(":business:activity_chart")
+        implementation project(":business:fragment_deal")
+        implementation project(":business:fragment_home")
+        implementation project(":business:fragment_mine")
+        implementation project(":business:fragment_quote")
+    }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_b">1dp</dimen>
+    <dimen name="height_b">50dp</dimen>
+    <!-- 跑马灯 -->
+    <dimen name="marquee__image_size">21dp</dimen>
+</resources>
