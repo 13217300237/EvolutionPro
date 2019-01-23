@@ -140,14 +140,9 @@ public class ZRouter {
      */
     public <T> T navigation(String serviceName) {
         Postcard postcard = LogisticsCenter.buildProvider(serviceName);
-        if (null == postcard) {// Compatible 1.0.5 compiler sdk.
-            postcard = LogisticsCenter.buildProvider(serviceName);
-        }
         if (null == postcard)
             return null;
-
         LogisticsCenter.complete(postcard);//补全postcard字段值
-
         return (T) postcard.getProvider();
     }
 
