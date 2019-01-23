@@ -3,7 +3,7 @@ package study.hank.com.annotation.facade.model;
 import study.hank.com.annotation.facade.enums.RouteType;
 
 /**
- * 容器：封装路由目的地信息
+ * 容器：封装路由目的地信息基类
  */
 public class RouteMeta {
 

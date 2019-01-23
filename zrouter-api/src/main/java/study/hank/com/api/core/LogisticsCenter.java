@@ -82,7 +82,6 @@ public class LogisticsCenter {
                     break;
             }
         }
-
     }
 
     public static Postcard buildProvider(String name) {
