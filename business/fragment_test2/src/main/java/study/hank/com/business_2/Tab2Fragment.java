@@ -1,4 +1,4 @@
-package study.hank.com.business_3;
+package study.hank.com.business_2;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,15 +11,15 @@ import android.view.ViewGroup;
 import study.hank.com.annotation.ZRoute;
 import study.hank.com.common.RouterPathConst;
 
-@ZRoute(RouterPathConst.PATH_FRAGMENT_TAB4)
-public class MineFragment extends Fragment {
-    public MineFragment() {
+@ZRoute(RouterPathConst.PATH_FRAGMENT_TAB2)
+public class Tab2Fragment extends Fragment {
+    public Tab2Fragment() {
     }
 
-    public static MineFragment newInstance(Bundle bundle) {
-        MineFragment homeFragment = new MineFragment();
-        homeFragment.setArguments(bundle);
-        return homeFragment;
+    public static Tab2Fragment newInstance(Bundle bundle) {
+        Tab2Fragment tab2Fragment = new Tab2Fragment();
+        tab2Fragment.setArguments(bundle);
+        return tab2Fragment;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class MineFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_mine, null);
+        View root = inflater.inflate(R.layout.fragment_tab2, null);
         return root;
     }
 

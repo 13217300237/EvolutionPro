@@ -4,6 +4,6 @@
     <item android:drawable="@mipmap/a_tabbar_home_p" android:state_pressed="true" />
 
     <!-- 默认状态 -->
-    <item android:drawable="@mipmap/a_tabbar_home" />
+    <item android:drawable="@mipmap/a_tabbar_tab1" />
 
 </selector>

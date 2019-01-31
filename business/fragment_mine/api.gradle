@@ -11,7 +11,7 @@ android {
 
     sourceSets {
         main {
-            //注意，这里是 api.gradle ，
+            // 注意，这里是 api.gradle ，
             // 这里不需要用isModule做判断。因为 setting.gradle中的gradle代码逻辑，会自动程程一个XXX_api module
             // 这个module，一定不能有 launcher activity ,否则，模块单独运行时，手机桌面会生成多个app图标
             manifest.srcFile 'src/main/module/AndroidManifest.xml'

@@ -110,25 +110,25 @@ public class MainActivity extends AppCompatActivity {
     private List<TabTitle> getBottomSetting() {
         //本来这里应该要读取配置文件，然后配置文字和颜色，还有图标,暂时写死
         titleObjectList.add(new TabTitle(
-                RouterPathConst.PATH_FRAGMENT_HOME,
-                R.string.tag_name_home,
+                RouterPathConst.PATH_FRAGMENT_TAB1,
+                R.string.tag_name_tab1,
                 R.color.home_tab_text_selector,
-                DrawableUtil.getStateListDrawable(this, R.mipmap.a_tabbar_home, R.mipmap.a_tabbar_home_p)));
+                DrawableUtil.getStateListDrawable(this, R.mipmap.a_tabbar_tab1, R.mipmap.a_tabbar_home_p)));
         titleObjectList.add(new TabTitle(
-                RouterPathConst.PATH_FRAGMENT_DEAL,
-                R.string.tag_name_deal,
+                RouterPathConst.PATH_FRAGMENT_TAB2,
+                R.string.tag_name_tab2,
                 R.color.home_tab_text_selector,
-                DrawableUtil.getStateListDrawable(this, R.mipmap.a_tabbar_trade, R.mipmap.a_tabbar_trade_p)));
+                DrawableUtil.getStateListDrawable(this, R.mipmap.a_tabbar_tab2, R.mipmap.a_tabbar_trade_p)));
         titleObjectList.add(new TabTitle(
-                RouterPathConst.PATH_FRAGMENT_QUOTE,
-                R.string.tag_name_quote,
+                RouterPathConst.PATH_FRAGMENT_TAB3,
+                R.string.tag_name_tab3,
                 R.color.home_tab_text_selector,
-                DrawableUtil.getStateListDrawable(this, R.mipmap.a_tabbar_market, R.mipmap.a_tabbar_market_p)));
+                DrawableUtil.getStateListDrawable(this, R.mipmap.a_tabbar_tab3, R.mipmap.a_tabbar_market_p)));
         titleObjectList.add(new TabTitle(
-                RouterPathConst.PATH_FRAGMENT_MINE,
-                R.string.tag_name_mine,
+                RouterPathConst.PATH_FRAGMENT_TAB4,
+                R.string.tag_name_tab4,
                 R.color.home_tab_text_selector,
-                DrawableUtil.getStateListDrawable(this, R.mipmap.a_tabbar_me, R.mipmap.a_tabbar_me_p)));
+                DrawableUtil.getStateListDrawable(this, R.mipmap.a_tabbar_tab4, R.mipmap.a_tabbar_me_p)));
 
 
         return titleObjectList;

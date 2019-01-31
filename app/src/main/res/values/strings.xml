@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">EvolutionPro</string>
 
-    <string name="tag_name_home">首页</string>
-    <string name="tag_name_quote">行情</string>
-    <string name="tag_name_deal">交易</string>
-    <string name="tag_name_mine">我的</string>
+    <string name="tag_name_tab1">首页</string>
+    <string name="tag_name_tab2">TAB2</string>
+    <string name="tag_name_tab3">TAB3</string>
+    <string name="tag_name_tab4">我的</string>
     <string name="tag_name_default">默认</string>
 
 </resources>

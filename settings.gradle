@@ -1,4 +1,4 @@
-include ':app', ':business:fragment_deal', ':business:fragment_quote', ':zrouter-api', ':zrouter-annotation', ':zrouter-compiler', ':function:common', ':business:fragment_home', ':business:activity_chart'
+include ':app', ':business:fragment_test', ':business:fragment_test2', ':zrouter-api', ':zrouter-annotation', ':zrouter-compiler', ':function:common', ':business:fragment_home', ':business:activity_other'
 
 
 include_with_api(':business:fragment_mine')

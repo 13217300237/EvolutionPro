@@ -20,11 +20,11 @@ import study.hank.com.common.RouterPathConst;
  * 并且这个首页的Fragment 业务将会与其他业务完全隔离，这是从代码层面完全隔离，
  * 支持独立调试开发,也支持HomeFragment作为零件，附加在外壳上
  */
-@ZRoute(RouterPathConst.PATH_FRAGMENT_HOME)
+@ZRoute(RouterPathConst.PATH_FRAGMENT_TAB1)
 public class HomeFragment extends Fragment {
 
     private Button mBtnToMine;
-    private Button mBtnToChart;
+    private Button mBtnToOtherActivity;
     private Button mBtnCallMine;
 
     public HomeFragment() {
@@ -51,15 +51,15 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 Bundle bd = new Bundle();
                 bd.putString("from", "首页");
-                ZRouter.getInstance().build(RouterPathConst.PATH_FRAGMENT_MINE).navigation();
+                ZRouter.getInstance().build(RouterPathConst.PATH_FRAGMENT_TAB4).navigation();
             }
         });
 
-        mBtnToChart = root.findViewById(R.id.btn_to_chart);
-        mBtnToChart.setOnClickListener(new View.OnClickListener() {
+        mBtnToOtherActivity = root.findViewById(R.id.btn_to_other_activity);
+        mBtnToOtherActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ZRouter.getInstance().build(RouterPathConst.PATH_ACTIVITY_CHART).navigation();
+                ZRouter.getInstance().build(RouterPathConst.PATH_ACTIVITY_OTHER).navigation();
             }
         });
 

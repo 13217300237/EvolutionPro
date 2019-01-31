@@ -53,9 +53,9 @@ dependencies {
     //这里会引用业务层的module
     if (isModule.toBoolean()) {
         implementation project(":business:activity_chart")
-        implementation project(":business:fragment_deal")
+        implementation project(":business:fragment_test")
         implementation project(":business:fragment_home")
         implementation project(":business:fragment_mine")
-        implementation project(":business:fragment_quote")
+        implementation project(":business:fragment_test2")
     }
 }
